@@ -1,5 +1,11 @@
-<div class="jumbotron">
-	<h1>Pages#home</h1>
-	<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron center">
+     <h1>Welcome to my app!</h1>
+     <% if user_signed_in? %>
+          # do something <br>
+     <% else %>
+       <p>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>
+  <%= link_to "Bootstrap", bootstrap_path %>  
 </div>
-
