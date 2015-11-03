@@ -1,0 +1,18 @@
+Cards fields
+
+Description  	:	Next step, string
+Project_name	:	Project name, string
+Owner					:	user_id, integer
+Progress 			:	integer %
+Status				:	variable
+Resources			:	user_id, integer
+
+Belongs_to 		: Project_id
+
+
+
+Project (has many Cards)
+id_
+Has_one user
+
+
