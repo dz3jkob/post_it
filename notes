@@ -1,11 +1,12 @@
 Cards fields
 
-Description  	:	Next step, string
-Project_name	:	Project name, string
-Owner					:	user_id, integer
-Progress 			:	integer %
-Status				:	variable
-Resources			:	user_id, integer
+!Description  	:	text //Next step
+project_name	:	integer //project_id 
+!owner					:	integer //user_id
+progress 			:	integer //%
+#rails generate add_progress_to_cards progress:integer
+status				:	intger  //3 options
+resources			:	integer //integer ?? many 
 
 Belongs_to 		: Project_id
 

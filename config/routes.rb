@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :cards
   devise_for :users
+  resources :cards
   root 'pages#home'
   get "bootstrap" => "pages#bootstrap"
 

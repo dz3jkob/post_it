@@ -14,7 +14,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
-    @card = Card.new
+    @card = current_user.cards.build
   end
 
   # GET /cards/1/edit
@@ -24,7 +24,7 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
-    @card = Card.new(card_params)
+    @card = current_user.cards.build(card_params)
 
     respond_to do |format|
       if @card.save
