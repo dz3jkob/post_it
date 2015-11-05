@@ -15,10 +15,12 @@
     <% @cards.each do |card| %>
       <tr>
         <td><%= card.description %></td>
-        <td><%= card.user_id %></td>
+        <td><%= card.user.email if card.user %></td>
         <td><%= link_to 'Show', card %></td>
+        <% if card.user == current_user %>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Card', new_card_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Card', new_card_path %>
+<% end %>

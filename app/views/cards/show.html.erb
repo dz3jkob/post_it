@@ -4,6 +4,7 @@
   <strong>Description:</strong>
   <%= @card.description %>
 </p>
-
-<%= link_to 'Edit', edit_card_path(@card) %> |
+<% if @card.user == current_user %>
+	<%= link_to 'Edit', edit_card_path(@card) %> |
+<% end %>
 <%= link_to 'Back', cards_path %>
