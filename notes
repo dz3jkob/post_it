@@ -11,9 +11,16 @@ resources			:	integer //integer ?? many
 Belongs_to 		: Project_id
 
 
+rails generate scaffold projects title:string user_id:integer:index description:text --skip-stylesheets
 
 Project (has many Cards)
+
 id_
+has_many cards
 Has_one user
 
-
+/app/views/projects/_form
+  <div class="form-group">
+    <%= f.label :Owner%><br>
+    <%= f.number_field :user_id %>
+  </div>
