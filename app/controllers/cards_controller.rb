@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  before_action :projects_exist, only: [:new]
   before_action :set_card, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
@@ -74,8 +75,13 @@ class CardsController < ApplicationController
       redirect_to cards_path, notice: "Not authorized to edit this card" if @card.nil?
     end
 
+   def projects_exist
+      @project = Project.first
+      redirect_to projects_path, notice: "Create project first" if @project.nil?
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:description)
+      params.require(:card).permit(:description, :project_id)
     end
 end
