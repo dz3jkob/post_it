@@ -14,6 +14,7 @@ Belongs_to 		: Project_id
 rails generate scaffold projects title:string user_id:integer:index description:text --skip-stylesheets
 
 Project (has many Cards)
+  # update to destroy cards with the project or sth
 
 id_
 has_many cards
@@ -24,3 +25,28 @@ Has_one user
     <%= f.label :Owner%><br>
     <%= f.number_field :user_id %>
   </div>
+
+  views/layout/application.html.erb
+
+  removed the turbolinks line
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Post It</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+	<div class="container">
+		<% flash.each do |name, msg| %>
+  		   <%= content_tag(:div, msg, class: "alert alert-info alert-#{name}") %>
+		<% end %>
+	    <%= yield %>
+	</div>
+	
+</body>
+</html>

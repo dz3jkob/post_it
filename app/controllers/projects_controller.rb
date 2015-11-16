@@ -55,6 +55,7 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1
   # DELETE /projects/1.json
+  # update to destroy cards with the project or sth
   def destroy
     @project.destroy
     respond_to do |format|
