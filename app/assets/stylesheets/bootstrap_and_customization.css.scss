@@ -1,13 +1,14 @@
 $font-family-sans-serif:	'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $btn-primary-bg:			#d35400;
+$body-bg:	#EDF2F4;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 .center {
-     text-align: center;
+  text-align: center;
 }
 
 .navbar-brand {
-     font-weight: bold;
+  font-weight: bold;
 }

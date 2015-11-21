@@ -27,23 +27,5 @@
 
 
 <% @cards = Card.all %>
-<div class="masonary-cards transitions-enabled">
-		<% @cards.each do |card| %>
-		  <% if card.project_id == @project.id %> 
-		    <div class = "box panel panel-default">
-		      <%= card.description %>
-		      <div class = "panel-body">
-		        <strong><%= card.user.email if card.user %></strong><br/>
-		        <%= card.project_id %>
-		        <div class = "action">
-		          <%= link_to 'Show', card_path(card) %>
-		          <% if card.user == current_user %>
-		            <%= link_to 'Edit', edit_card_path(card) %>
-		            <%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %>
-		          <% end %>
-		        </div>
-		      </div>
-		    </div>
-	  <% end %>
-	<% end %>
-</div>
+<%= render 'index_cards.html.erb' %>
+

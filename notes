@@ -1,10 +1,10 @@
 Cards fields
 
-!Description  	:	text //Next step
-project_name	:	integer //project_id 
-!owner					:	integer //user_id
 progress 			:	integer //%
-#rails generate add_progress_to_cards progress:integer
+#duedate        : date 
+#rails generate migration add_statusandduedate_to_cards progress:integer
+#rails generate migration add_duedate_to_cards duedate:date
+
 status				:	intger  //3 options
 resources			:	integer //integer ?? many 
 

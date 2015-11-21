@@ -4,8 +4,36 @@
 }
 
 .box {
-	background-color: #ecf0f1;
-  margin: 5px;
-  width: 220px;
-  height: 140px;
+	background-color: #FFFFFF;
+
+}
+
+.panel-ontime {
+  border-color: #84DCC6;
+  border-width: 5px;
+}
+
+.panel-delayed {
+  border-color: #FFA69E;
+  border-width: 5px;
+}
+
+.panel-box-ontime {
+	background-color: #84DCC6;
+	border-color: #84DCC6;
+	padding-bottom: 0px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.panel-box-delayed {
+	background-color: #FFA69E;
+	border-color: #FFA69E;
+	padding-bottom: 0px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.panel-body {
+  padding-top: 0px;
 }
