@@ -19,14 +19,6 @@
         <td><%= project.name %></td>
         <td><%= project.user.email if project.user %></td>
         <td><%= project.description %></td>
-
-        <% @cards = Card.all %>
-          <% @cards.each do |card| %>
-            <% if card.project_id == project.id %> 
-              <td><%= card.description %>,</td>
-            <% end %>
-          <% end %>
-
         <td><%= link_to 'Show', project %></td>
         <% if project.user == current_user %>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>

@@ -7,3 +7,9 @@ $ ->
     isFitWidth: true,
     columnWidth: 120,
   }).masonry('reload');
+
+  $(document).on 'ready page:load', -> $('.date').datepicker({
+    format: 'dd/mm/yyyy'
+    autoclose: true,
+    todayHighlight: true,
+	})

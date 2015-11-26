@@ -1,6 +1,6 @@
 <div class="masonary-cards transitions-enabled">
   <% @cards.each do |card| %>
-    <% if Date.today <= card.duedate %>
+    <% if Date.today >= card.duedate %>
       <div class = "box panel panel-delayed">
       <div class = "panel-box-delayed"><%= card.description %></div>
     <% else %>

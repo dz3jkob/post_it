@@ -32,6 +32,16 @@ gem 'devise'
 #masonary gem
 gem 'masonry-rails', '~> 0.2.0'
 
+#turbolink with masonary fix
+gem 'jquery-turbolinks'
+
+#callendar gem
+gem 'bootstrap-datepicker-rails'
+
+#fixin turbolink again
+#gem 'execjs'
+#gem 'therubyracer', :platforms => :ruby
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
